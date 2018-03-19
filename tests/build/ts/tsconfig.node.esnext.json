@@ -1,0 +1,7 @@
+{
+    "extends": "./tsconfig.node.common.json",
+    "compilerOptions": {
+        "target": "esnext",
+        "outDir": "../../node/dist/esnext"
+    }
+}

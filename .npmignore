@@ -1,0 +1,12 @@
+node_modules
+tests
+
+.editorconfig
+.gitignore
+.npmignore
+package-lock.json
+tslint.json
+
+# These files are symlinks to lib/types.d.ts and only created separately for the tests
+lib/cjs.d.ts
+lib/es.d.ts
