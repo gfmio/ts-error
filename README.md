@@ -4,10 +4,13 @@
 
 This package provides an extendable error class, `ExtendableError` for JavaScript / TypeScript. There exist a number of similar packages on NPM, but they all have shortcomings, like not supporting TypeScript, being awkward to use with TypeScript 2, not being compatible with old browsers, not printing the stack trace when used with `console.log` or similar functions or not having all features I wanted. So I decided to write my own.
 
+Obviously, it's not all 100% written from scratch, but rather I collected the good parts from various existing open source error packages and some StackOverflow answers, fixed various errors, wrote some tests and put it together in one package.
+
 The purpose of extendable errors classes is to be able to throw error objects that are subclasses of the built-in JavaScript `Error` class, which has a number of gotchas, and to then filter them with the `instanceof` operator in the `catch` clause of a `try`/`catch` block as well as potentially adding additional variables to the error object.
 
 This `ExtendableError` class will:
 
+* subclass the built-in `Error` class. Subclasses created from `ExtendableError` will subclass `Error`, `ExtendableError` and any other classes in the inheritance chain.
 * have a name attribute equal to the class name
 * have a string representation with `toString()` that includes the name and message properties of the error object. This is also fixed for all versions of IE, where the error object usually does *not* print error objects like this.
 * include all non-standard properties that default `Error` objects provide in different browsers
@@ -21,10 +24,16 @@ It's also really small, with less than 200 lines of code, and it has no producti
 
 ## Install
 
-You can install the [ts-error package](https://npmjs.org/gfmio/ts-error) from NPM with the command:
+You can install the [ts-error package](https://www.npmjs.com/package/ts-error) from NPM with the command:
 
 ```sh
 npm install ts-error
+```
+
+If you're using TypeScript, you will also need the `@types/node` dev dependency (unless you have type checking disabled).
+
+```sh
+npm install --save-dev @types/node
 ```
 
 ## Usage
@@ -74,7 +83,26 @@ In ES5:
 ```js
 var ExtendableError = require("ts-error").ExtendableError;
 
-// class CustomError extends ExtendableError {}
+// This is taken from TypeScript compiler output, because it works quite reliably.
+// There are various other methods though, so use whatever you like, if you have to use ES5.
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var CustomError = /** @class */ (function (_super) {
+    __extends(CustomError, _super);
+    function CustomError() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return CustomError;
+}(ExtendableError));
 
 try {
     throw new CustomError("Optional Error message");
