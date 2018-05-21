@@ -7,7 +7,7 @@
   "main": "./lib/cjs.js",
   "module": "./lib/es.js",
   "browser": "./lib/cjs.js",
-  "types": "./lib/cjs.d.ts",
+  "types": "./lib/es.d.ts",
   "homepage": "https://github.com/gfmio/ts-error#readme",
   "repository": {
     "type": "git",
