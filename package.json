@@ -1,6 +1,6 @@
 {
   "name": "ts-error",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An extendable Error class that actually works, with TypeScript definition files, supporting old and new style classes and compatibility even with the oldest browsers",
   "author": "Frédérique Mittelstaedt <frederique@gfm.io>",
   "license": "MIT",
