@@ -1,11 +1,7 @@
 {
-    "extends": "./tsconfig.common.json",
-    "compilerOptions": {
-        "target": "es5",
-        "lib": [
-            "es5",
-            "es6",
-            "dom"
-        ]
-    }
+  "extends": "./tsconfig.common.json",
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es5", "es6", "dom"]
+  }
 }

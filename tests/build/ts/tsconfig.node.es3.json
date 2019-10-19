@@ -1,7 +1,7 @@
 {
-    "extends": "./tsconfig.node.common.json",
-    "compilerOptions": {
-        "target": "es3",
-        "outDir": "../../node/dist/es3"
-    }
+  "extends": "./tsconfig.node.common.json",
+  "compilerOptions": {
+    "target": "es3",
+    "outDir": "../../node/dist/es3"
+  }
 }

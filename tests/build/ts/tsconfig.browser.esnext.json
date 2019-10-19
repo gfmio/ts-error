@@ -1,6 +1,6 @@
 {
-    "extends": "./tsconfig.common.json",
-    "compilerOptions": {
-        "target": "esnext"
-    }
+  "extends": "./tsconfig.common.json",
+  "compilerOptions": {
+    "target": "esnext"
+  }
 }
