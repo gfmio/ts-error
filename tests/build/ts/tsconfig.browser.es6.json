@@ -1,6 +1,6 @@
 {
-    "extends": "./tsconfig.common.json",
-    "compilerOptions": {
-        "target": "es6"
-    }
+  "extends": "./tsconfig.common.json",
+  "compilerOptions": {
+    "target": "es6"
+  }
 }

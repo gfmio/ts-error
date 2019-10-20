@@ -1,7 +1,7 @@
 {
-    "extends": "./tsconfig.common.json",
-    "compilerOptions": {
-        "declaration": false,
-        "sourceMap": false
-    }
+  "extends": "./tsconfig.common.json",
+  "compilerOptions": {
+    "declaration": false,
+    "sourceMap": false
+  }
 }

@@ -7,31 +7,23 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+printWidth = 80
 
-[*.{ts,tsx,js,jsx,json}]
-indent_size = 4
+[*.{ts,tsx,js,jsx,json,json5}]
 curly_bracket_next_line	= true
 spaces_around_operators = true
 spaces_around_brackets = outside
 indent_brace_style = K&R
+
+[*.{ts,js}]
+max_line_length = 80
+
+[*.{tsx,jsx}]
 max_line_length = 120
 
-[{package.json,.travis.yml}]
-indent_size = 2
-
-# XML Project Files
-[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
-indent_size = 2
+[*.{json,json5}]
+max_line_length = 120
 
 # Markdown Files
 [*.md]
 trim_trailing_whitespace = false
-
-# Web Files
-[*.{htm,html,css,scss,less}]
-indent_size = 2
-insert_final_newline = true
-
-# Bash Files
-[*.sh]
-end_of_line = lf

@@ -4,5 +4,6 @@ tests
 .editorconfig
 .gitignore
 .npmignore
+.prettierrc.toml
 package-lock.json
 tslint.json

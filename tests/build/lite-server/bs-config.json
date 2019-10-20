@@ -1,9 +1,7 @@
 {
-    "port": 8000,
-    "files": [
-        "./tests/browser/dist/**/*"
-    ],
-    "server": {
-        "baseDir": "./tests/browser/dist/"
-    }
+  "port": 8000,
+  "files": ["./tests/browser/dist/**/*"],
+  "server": {
+    "baseDir": "./tests/browser/dist/"
+  }
 }
