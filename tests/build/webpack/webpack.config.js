@@ -8,6 +8,7 @@ const target = process.env.TARGET;
 const cjs = target === "es3" || target === "es5";
 
 module.exports = {
+  mode: "development",
   entry: cjs ? "./cjs.ts" : "./es.ts",
   context: path.join(__dirname, "..", "..", "browser", "src"),
   output: {
