@@ -4,10 +4,8 @@
 
 // tslint:disable:no-implicit-dependencies no-submodule-imports max-classes-per-file
 
-import * as chai from "chai";
-import * as mocha from "mocha";
-
-const expect = chai.expect;
+import { expect } from "chai";
+import { describe, it } from "mocha";
 
 import { ExtendableError } from "../../lib/cjs";
 
@@ -55,7 +53,7 @@ describe("CJS: An ExtendableError", () => {
 
 describe("CJS: An ExtendableError", () => {
   it("should have a stack trace starting with its name", () => {
-    expect(extendableError.stack.startsWith(extendableError.name)).to.equal(
+    expect(extendableError.stack!.startsWith(extendableError.name)).to.equal(
       true,
     );
   });
@@ -103,7 +101,7 @@ describe("CJS: A CustomError", () => {
 
 describe("CJS: A CustomError", () => {
   it("should have a stack trace starting with its name", () => {
-    expect(customError.stack.startsWith(customError.name)).to.equal(true);
+    expect(customError.stack!.startsWith(customError.name)).to.equal(true);
   });
 });
 
