@@ -9,6 +9,8 @@
     "emitDecoratorMetadata": true,
     "noEmitHelpers": false,
     "importHelpers": false,
+    "allowJs": true,
+    "checkJs": false,
     "typeRoots": ["../../../node_modules/@types", "../../../lib"]
   }
 }
